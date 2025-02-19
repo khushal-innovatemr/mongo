@@ -1,0 +1,19 @@
+[
+  {
+    $addFields: {
+      Tag_C:{
+        $size:{
+          $ifNull:["$tags",[]]
+        }
+      }
+    }
+  },
+  {
+    $group:{
+        _id:null,
+      avg:{
+        $avg:"$Tag_C"
+      }
+    }
+  }
+]

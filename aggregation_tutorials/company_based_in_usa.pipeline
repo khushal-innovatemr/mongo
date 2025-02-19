@@ -1,0 +1,15 @@
+[
+  {
+    $match: {
+      "company.location.country":"USA"
+    }
+  },
+  {
+    $group:{
+      _id:null,
+      userCount:{
+        $sum:1
+      }
+    }
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    $sort: {
+    	registered:-1
+    }
+  },{
+    $limit: 6
+  },{
+    $project: {
+      name:1,
+      gender:1
+    }
+  }
+]   

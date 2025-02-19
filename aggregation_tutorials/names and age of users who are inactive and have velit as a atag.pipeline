@@ -1,0 +1,18 @@
+[
+  {
+    $match: {
+  		tags:"velit",
+      isActive:false,
+    }
+  },
+  {
+    $project: {
+      name:1,
+      age:1,
+      
+    }
+  },
+  {
+    $count:'totalcount'
+  }
+]

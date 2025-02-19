@@ -1,0 +1,12 @@
+[
+    [
+  {
+    $group: {
+      _id: null,
+      average_age:{
+        $avg: "$age"
+      }
+    }
+  }
+]
+]

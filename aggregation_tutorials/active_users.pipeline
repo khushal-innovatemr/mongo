@@ -1,0 +1,11 @@
+[
+  {
+    $match: {
+      isActive: true,
+    },
+  },
+  {
+    $count: "Active_users",
+  },
+  
+]

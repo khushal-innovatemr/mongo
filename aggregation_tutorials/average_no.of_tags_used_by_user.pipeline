@@ -1,0 +1,20 @@
+[
+  {
+    $unwind:"$tags"
+  },
+  {
+	$group: {
+	  _id: "$_id",
+    tags:{
+      $sum:1
+    }
+	}  
+  },{
+    $group: {
+      _id: null,
+      avg:{
+        $avg:"$tags"
+      }
+    }
+  }
+]

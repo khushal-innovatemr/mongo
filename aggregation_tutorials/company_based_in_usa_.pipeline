@@ -1,0 +1,10 @@
+[
+  {
+    $match: {
+      "company.location.country": "USA",
+    },
+  },
+  {
+    $count: "company_based_in_US:",
+  },
+]
